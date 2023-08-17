@@ -3,8 +3,190 @@
     src: url(./Norse-Bold.otf);
 }
 
-input:focus, input:hover{
-    padding: 5px;
-    border: solid blue 1px;
-    box-shadow: 0px 0px 2px 0px rgba(0,0,0,1);
+body {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    line-height: 0;
+}
+
+main {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    line-height: normal;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 5rem;
+    background-color: #f9fafc;
+    color: rgb(0, 0, 0);
+}
+
+.background-div {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 70vw;
+    background: url(./images/background.jpg) center / cover no-repeat;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-family: 'norse';
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    height: 125px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 200px;
+}
+
+p > img {
+    height: 85%;
+}
+
+img[src="./images/background.jpg"] {
+    height: 100%;
+    width: 100%;
+}
+
+.main-content {
+    height: 100vh;
+    background-color:#f9fafc;
+}
+
+header > :first-child {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-size: 0.80rem;
+    font-weight: 750;
+    color: #393d3f;
+    letter-spacing: .07rem;
+    padding-bottom: 0.25rem;
+}
+
+li {
+    display: inline-block;
+    flex-direction: column;
+    list-style: none;
+    padding: 1rem 2rem 1rem 0;
+}
+
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+input {
+    width: 20rem;
+    border: #E5E7EB 1px solid;
+    border-radius: 0.25rem;
+    padding: 0.35rem;
+}
+
+input:focus {
+    border: blue solid 1px;
+    border-radius: 0.25rem;
+    outline: blue;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 2rem;
+    padding-bottom: 3rem;
+    box-shadow: 0px 15px 50px 0px rgba(0,0,0,0.20);
+}
+
+button {
+    cursor: pointer;
+    margin: 2rem 5rem;
+    padding: 1.25rem 3rem;
+    color: white;
+    background-color: #596D48;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    display: block;
+}
+
+.log-in {
+    margin: 2rem 5rem;
+    color: #393d3f;
+    font-weight: 600;
+    font-size: 0.90rem;
+}
+
+a {
+    text-decoration: none;
+    color: #596D48;
+}
+
+input:invalid {
+    border: solid 1px red;
+}
+
+.error {
+    border: solid 1px red;
+    outline: red;
+}
+
+.error:focus {
+    border: red solid 1px;
+    outline: red;
+    box-shadow: 5px 5px 20px 0px rgba(255, 0, 0, 0.2)
+}
+
+:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+input, span {
+    position: relative;
+}
+
+#confirm_password.error + span::after {
+    position: absolute;
+    content: "⚠️ passwords don't match!";
+    width: 20rem;
+    top: 25px;
+    left: -330px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+}
+
+#password:invalid + span::after {
+    position: absolute;
+    content: "⚠️passwords must be at least 8 characters long";
+    width: 20rem;
+    top: 25px;
+    left: -330px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: red;
+    text-align: center;
 }
